@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 const IndexPage = () => {
   const author = useStaticQuery(graphql`
@@ -14,6 +15,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
+      <Head title="Home" />
       <h1>Hello</h1>
       <h2>
         I'm {author.site.siteMetadata.author}, a full-stack developer living in
